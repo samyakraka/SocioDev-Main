@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Story - Voice Frame</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Review Your Submission</h1>
+        <p>Make any needed changes before final approval</p>
+      </header>
+
+      <div class="story-review">
+        <div class="ai-generated">
+          <h2>AI Generated Content</h2>
+          <div class="review-section">
+            <h3>Headline</h3>
+            <p>{{ story.headline }}</p>
+          </div>
+          <div class="review-section">
+            <h3>Summary</h3>
+            <p>{{ story.summary }}</p>
+          </div>
+        </div>
+
+        <div class="story-content">
+          <h2>Your Story</h2>
+          <div class="review-section">
+            <h3>Content</h3>
+            <p>{{ story.text }}</p>
+          </div>
+
+          {% if story.image %}
+          <div class="review-section">
+            <h3>Image</h3>
+            <img
+              src="{{ url_for('static', filename=story.image) }}"
+              alt="Story Image"
+              class="story-image"
+            />
+          </div>
+          {% endif %} {% if story.audio %}
+          <div class="review-section">
+            <h3>Audio</h3>
+            <audio
+              controls
+              src="{{ url_for('static', filename=story.audio) }}"
+            ></audio>
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="edit-form">
+          <h2>Edit Content</h2>
+          <form
+            action="{{ url_for('edit_story', story_id=story.id) }}"
+            method="POST"
+          >
+            <div class="form-group">
+              <label for="headline">Edit Headline:</label>
+              <input
+                type="text"
+                id="headline"
+                name="headline"
+                value="{{ story.headline }}"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="summary">Edit Summary:</label>
+              <textarea id="summary" name="summary" rows="4">
+{{ story.summary }}</textarea
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="text">Edit Story Text:</label>
+              <textarea id="text" name="text" rows="10">
+{{ story.text }}</textarea
+              >
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn secondary">Save Edits</button>
+              <a
+                href="{{ url_for('approve_story', story_id=story.id) }}"
+                class="btn primary"
+                >Approve & Publish</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="text-to-speech">
+        <h2>Listen to Your Story</h2>
+        <div class="form-group">
+          <label for="tts-language">Select Language:</label>
+          <select id="tts-language" name="language">
+            <option value="en-US">English (US)</option>
+            <option value="es-ES">Spanish (Spain)</option>
+            <option value="fr-FR">French (France)</option>
+            <option value="hi-IN">Hindi (India)</option>
+            <option value="de-DE">German (Germany)</option>
+            <option value="ja-JP">Japanese (Japan)</option>
+            <option value="zh-CN">Chinese (Mainland China)</option>
+          </select>
+        </div>
+        <button id="generateAudio" class="btn">Generate Speech</button>
+        <div id="ttsAudio" style="margin-top: 10px; display: none">
+          <audio id="ttsPlayer" controls></audio>
+        </div>
+        <div id="audioStatus" class="status-message"></div>
+
+        {% if story.translated_audio %}
+        <div class="available-translations">
+          <h3>Available Translations</h3>
+          <div class="translation-list">
+            {% for lang, path in story.translated_audio.items() %}
+            <div class="translation-item">
+              <span class="language-badge">{{ lang }}</span>
+              <audio
+                src="{{ url_for('static', filename=path) }}"
+                controls
+              ></audio>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("generateAudio")
+        .addEventListener("click", function () {
+          const text = document.getElementById("text").value;
+          const language = document.getElementById("tts-language").value;
+          const storyId = "{{ story.id }}";
+          const audioStatus = document.getElementById("audioStatus");
+
+          audioStatus.textContent = "Generating audio...";
+          audioStatus.className = "status-message processing";
+
+          fetch("/text-to-speech", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              text: text,
+              language: language,
+              story_id: storyId,
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                document.getElementById("ttsPlayer").src = data.audio_url;
+                document.getElementById("ttsAudio").style.display = "block";
+                audioStatus.textContent = "Audio generated successfully!";
+                audioStatus.className = "status-message success";
+              } else {
+                audioStatus.textContent = "Error: " + data.error;
+                audioStatus.className = "status-message error";
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              audioStatus.textContent = "Error generating speech";
+              audioStatus.className = "status-message error";
+            });
+        });
+    </script>
+  </body>
+</html>

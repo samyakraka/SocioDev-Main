@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Story - Voice Frame</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Share Your Story</h1>
+            <p>Your voice matters - tell us your experience</p>
+        </header>
+        
+        <div class="submission-form">
+            <form action="{{ url_for('submit') }}" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="user_type">I am submitting as:</label>
+                    <select name="user_type" id="user_type" required>
+                        <option value="ngo" {% if request.args.get('type') == 'ngo' %}selected{% endif %}>NGO Representative</option>
+                        <option value="volunteer" {% if request.args.get('type') == 'volunteer' %}selected{% endif %}>Volunteer</option>
+                        <option value="individual" {% if request.args.get('type') == 'individual' %}selected{% endif %}>Individual</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="story_text">Your Story:</label>
+                    <textarea name="story_text" id="story_text" rows="10" placeholder="Tell us your story..."></textarea>
+                </div>
+                
+                <div class="media-upload">
+                    <div class="form-group">
+                        <label for="image">Upload an Image (optional):</label>
+                        <input type="file" name="image" id="image" accept="image/*">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Record Audio (optional):</label>
+                        <div class="audio-controls">
+                            <button type="button" id="startRecord" class="btn">Start Recording</button>
+                            <button type="button" id="stopRecord" class="btn" disabled>Stop Recording</button>
+                            <div id="audio-status">Not recording</div>
+                        </div>
+                        <audio id="audioPlayback" controls style="display: none;"></audio>
+                        <input type="hidden" id="audioData" name="audioData">
+                        <input type="file" id="audio" name="audio" style="display: none;">
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Submit Story</button>
+                    <a href="{{ url_for('index') }}" class="btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Audio recording functionality
+        let mediaRecorder;
+        let audioChunks = [];
+        
+        document.getElementById('startRecord').addEventListener('click', async function() {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            
+            mediaRecorder.ondataavailable = (event) => {
+                audioChunks.push(event.data);
+            };
+            
+            mediaRecorder.onstop = () => {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                const audioUrl = URL.createObjectURL(audioBlob);
+                
+                const audio = document.getElementById('audioPlayback');
+                audio.src = audioUrl;
+                audio.style.display = 'block';
+                
+                // Create a file from blob for form submission
+                const audioFile = new File([audioBlob], "recording.wav", { type: 'audio/wav' });
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(audioFile);
+                document.querySelector('#audio').files = dataTransfer.files;
+            };
+            
+            audioChunks = [];
+            mediaRecorder.start();
+            document.getElementById('audio-status').textContent = 'Recording...';
+            this.disabled = true;
+            document.getElementById('stopRecord').disabled = false;
+        });
+        
+        document.getElementById('stopRecord').addEventListener('click', function() {
+            mediaRecorder.stop();
+            document.getElementById('audio-status').textContent = 'Recording finished';
+            this.disabled = true;
+            document.getElementById('startRecord').disabled = false;
+        });
+    </script>
+</body>
+</html>
