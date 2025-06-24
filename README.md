@@ -1,50 +1,190 @@
-# Welcome to your Expo app 👋
+# SocioDev
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<p align="center">
+  <img src="./assets/images/icon.png" alt="SocioDev Logo" width="120" height="120" />
+</p>
 
-## Get started
+<p align="center">
+  A social media platform for developers to share articles, connect, and grow their network.
+</p>
 
-1. Install dependencies
+## 📱 About SocioDev
+
+SocioDev is a mobile application built with React Native and Expo that allows developers to share knowledge, post articles, and connect with other developers. The platform includes features like user profiles, article publishing, bookmarking, following users, and AI-powered content generation.
+
+## ✨ Features
+
+### 👤 User Profiles
+
+- Custom user profiles with profile pictures
+- Add social media links (GitHub, LinkedIn, Portfolio website)
+- Follow other developers
+- View follower/following counts
+
+### 📝 Article Management
+
+- Create, edit, and delete articles
+- Add cover images to articles
+- Tag articles for better categorization
+- View trending and recent articles
+
+### 🔖 Bookmarks
+
+- Save interesting articles for later
+- Dedicated bookmarks tab for easy access
+- Track articles you've saved
+
+### 🤖 AI-Powered Content Generation
+
+- Generate article drafts using AI
+- Get AI-suggested titles, content, and tags
+- Quickly jumpstart your writing process
+
+### 🔍 Search & Discovery
+
+- Search articles by title, content, or tags
+- Discover trending articles
+- Explore articles from followed users
+
+## 🛠️ Technology Stack
+
+- **Frontend**: React Native, Expo Router
+- **UI Components**: Custom themed components, Tailwind CSS (NativeWind)
+- **State Management**: React Context API
+- **Authentication**: Firebase Authentication
+- **Database**: Firebase Firestore
+- **Storage**: Firebase Storage
+- **AI Integration**: Google Gemini AI API
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16 or newer)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- [Firebase account](https://firebase.google.com/)
+- [Google Gemini API key](https://ai.google.dev/) (optional, for AI features)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/SocioDev.git
+   cd SocioDev
+   ```
+
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Create a `.env` file in the root directory with your Firebase and Gemini API credentials:
 
-   ```bash
-    npx expo start
+   ```
+   FIREBASE_API_KEY=your_firebase_api_key
+   FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   FIREBASE_PROJECT_ID=your_firebase_project_id
+   FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+   FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+   FIREBASE_APP_ID=your_firebase_app_id
+   FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
+   GEMINI_API_KEY=your_gemini_api_key
    ```
 
-In the output, you'll find options to open the app in a
+4. Start the development server:
+   ```bash
+   npx expo start
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📱 App Navigation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Home Tab**: View feed of articles
+- **Explore Tab**: Discover new content and users
+- **Upload Tab**: Create and publish new articles
+- **Bookmarks Tab**: Access saved articles
+- **Profile Tab**: View and edit your profile
 
-## Get a fresh project
+## 🔑 Key Features Explained
 
-When you're ready, run:
+### Authentication
 
-```bash
-npm run reset-project
-```
+SocioDev uses Firebase Authentication for user management. The app includes:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Email/password registration and sign-in
+- Persistent authentication state
+- Profile management
 
-## Learn more
+### Article Publishing
 
-To learn more about developing your project with Expo, look at the following resources:
+Users can create articles with:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Title and content
+- Cover images
+- Tags for categorization
+- AI-assisted content generation
 
-## Join the community
+### Social Features
 
-Join our community of developers creating universal apps.
+- Follow other users
+- View user profiles
+- See follower/following counts
+- Browse articles by specific users
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Bookmarking System
+
+- Save articles to your personal bookmarks
+- Track articles' saved count
+- Quick access to bookmarked content
+
+## 🧩 Main Components
+
+### ThemedView and ThemedText
+
+Custom components that adapt to the device's color scheme (dark/light mode) for consistent UI presentation.
+
+### Article Cards
+
+Reusable components for displaying article previews in various contexts (home feed, profile, bookmarks).
+
+### Profile Card
+
+Component displaying user information, including profile picture, username, email, and social links.
+
+## 🧠 AI Integration
+
+SocioDev integrates with Google's Gemini AI to help users generate article content. This feature:
+
+1. Takes a topic idea from the user
+2. Generates a title, content, and tags
+3. Populates the article form with generated content
+4. Allows users to edit before publishing
+
+## 🔄 Data Flow
+
+1. Firebase stores all user and article data
+2. React Context provides authentication and user data to components
+3. Service functions handle data CRUD operations
+4. UI components display and allow interaction with data
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📧 Contact
+
+Your Name - your.email@example.com
+
+Project Link: [https://github.com/yourusername/SocioDev](https://github.com/yourusername/SocioDev)

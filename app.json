@@ -9,13 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.samyakraka.SocioDev"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.samyakraka.SocioDev"
     },
     "web": {
       "bundler": "metro",
@@ -35,7 +37,17 @@
       ]
     ],
     "experiments": {
-      "typedRoutes": true
-    }
+      "tsconfigPaths": true
+    },
+    "assetBundlePatterns": ["**/*"],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    },
+    "owner": "samyakraka"
   }
 }
