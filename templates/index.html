@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Frame - Share Your Story</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Voice Frame</h1>
+        <p>Share your stories and experiences with the world</p>
+      </header>
+
+      <div class="user-selection">
+        <h2>How would you like to contribute?</h2>
+
+        <div class="role-cards">
+          <a href="{{ url_for('submit') }}?type=ngo" class="role-card">
+            <div class="role-icon">🏢</div>
+            <h3>NGO Representative</h3>
+            <p>Share stories from your organization</p>
+          </a>
+
+          <a href="{{ url_for('submit') }}?type=volunteer" class="role-card">
+            <div class="role-icon">🤝</div>
+            <h3>Volunteer</h3>
+            <p>Share your volunteering experiences</p>
+          </a>
+
+          <a href="{{ url_for('submit') }}?type=individual" class="role-card">
+            <div class="role-icon">👤</div>
+            <h3>Individual</h3>
+            <p>Share your personal story</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a href="{{ url_for('stories') }}" class="btn primary">View Stories</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Voice Frame - Collecting stories that matter</p>
+    </footer>
+  </body>
+</html>

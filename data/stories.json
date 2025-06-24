@@ -1,0 +1,199 @@
+[
+  {
+    "id": "722ae451-2b2f-4f4e-8486-12c8f306596e",
+    "user_type": "individual",
+    "text": "I have story related to symptoms which causes diseases in child age",
+    "image": null,
+    "audio": null,
+    "timestamp": "2025-04-23T21:57:46.697564",
+    "status": "approved",
+    "headline": "Here are a few options for a headline and summary, depending on the specific focus you want to emphasize:",
+    "summary": "Option 1 (General Focus):\n\nHeadline: Early Detection Key: Understanding Childhood Disease Symptoms\nSummary: Awareness of common childhood disease symptoms is crucial for early detection and intervention. Recognizing potential warning signs can lead to quicker diagnoses and improved health outcomes for children.\n\nOption 2 (Emphasis on Action):\n\nHeadline: Protect Your Child: A Guide to Recognizing Early Disease Symptoms\nSummary: Parents and caregivers can play a vital role in safeguarding children's health by learning to identify early symptoms of common diseases. Knowing what to look for empowers you to seek timely medical attention and prevent serious complications.\n\nOption 3 (Emphasis on the Importance):\n\nHeadline: Why Knowing Childhood Disease Symptoms Can Save Lives\nSummary: Understanding the symptoms associated with childhood diseases is essential for promoting children's health and well-being. Early recognition allows for prompt treatment, potentially preventing long-term health issues and even saving lives.\n\nTo further customize these, consider:\n\nThe specific age range: Is it infancy, toddlerhood, school-age children, etc.?\nThe type of symptoms you're focusing on: Fevers, rashes, respiratory problems, etc.?\nThe diseases you are talking about: Mention them in headline if these are the focus of the story",
+    "tts_options": {
+      "enabled": false,
+      "language": "en-US",
+      "available_languages": [
+        "en-US",
+        "es-ES",
+        "fr-FR",
+        "hi-IN",
+        "de-DE",
+        "ja-JP",
+        "zh-CN"
+      ]
+    }
+  },
+  {
+    "id": "ee5ddb79-a554-46aa-b420-5769bdff4f09",
+    "user_type": "ngo",
+    "text": "",
+    "image": "uploads/d1cf09f2-586c-4f3a-b74a-c32f1fb5bce6.png",
+    "audio": "uploads/323728e5-095e-4b72-a8f4-7d4338dc9c8f.wav",
+    "timestamp": "2025-04-23T21:59:08.727508",
+    "status": "approved",
+    "tts_options": {
+      "enabled": false,
+      "language": "en-US",
+      "available_languages": [
+        "en-US",
+        "es-ES",
+        "fr-FR",
+        "hi-IN",
+        "de-DE",
+        "ja-JP",
+        "zh-CN"
+      ]
+    }
+  },
+  {
+    "id": "18195d31-be24-4fc9-836e-96bbdeea5a18",
+    "user_type": "volunteer",
+    "text": "A little bird named Coco wanted to fly higher than the clouds. Every day, he flapped his wings a little more. One day, with a big swoosh, he soared above the tallest tree. The sky smiled at him, proud of his courage. From then on, Coco never doubted his dreams.",
+    "image": null,
+    "audio": null,
+    "timestamp": "2025-04-23T22:06:17.668384",
+    "status": "approved",
+    "headline": "**Headline:** Coco the Little Bird Achieves Sky-High Dream",
+    "summary": "**Summary:** A determined little bird named Coco dreams of flying higher than the clouds. Through daily perseverance and unwavering belief in himself, he finally soars above the tallest tree, realizing his dream and inspiring confidence in his abilities."
+  },
+  {
+    "id": "32e5d94e-7f1d-4b8f-b18b-8eb8a35137d9",
+    "user_type": "ngo",
+    "text": "A little bird named Coco wanted to fly higher than the clouds. Every day, he flapped his wings a little more. One day, with a big swoosh, he soared above the tallest tree. The sky smiled at him, proud of his courage. From then on, Coco never doubted his dreams.",
+    "image": null,
+    "audio": null,
+    "timestamp": "2025-04-23T22:07:53.816624",
+    "status": "approved",
+    "headline": "**Headline:** Little Bird's Big Dream: Coco Soars Above the Clouds",
+    "summary": "**Summary:** A determined little bird named Coco dreamed of flying higher than the clouds. Through daily practice and unwavering courage, he finally achieved his goal, soaring past the tallest tree. His success filled him with confidence and solidified his belief in the power of his dreams."
+  },
+  {
+    "id": "d46888d9-87c8-4346-a719-a81694461a60",
+    "user_type": "volunteer",
+    "text": "A little bird named Coco wanted to fly higher than the clouds. Every day, he flapped his wings a little more. One day, with a big swoosh, he soared above the tallest tree. The sky smiled at him, proud of his courage. From then on, Coco never doubted his dreams.",
+    "image": null,
+    "audio": "static/uploads\\4fd9925d-ccdd-4641-ae5b-b6e1de5ef932.mp3",
+    "timestamp": "2025-04-24T00:05:42.411085",
+    "status": "approved",
+    "tts_options": {
+      "enabled": true,
+      "language": "hi-IN",
+      "available_languages": [
+        "en-US",
+        "es-ES",
+        "fr-FR",
+        "hi-IN",
+        "de-DE",
+        "ja-JP",
+        "zh-CN"
+      ]
+    },
+    "headline": "Coco the Bird Achieves Sky-High Dreams",
+    "summary": "A determined little bird named Coco dreams of flying above the clouds. Through persistent effort, he finally soars higher than he ever imagined, proving that courage and dedication can make any dream a reality."
+  },
+  {
+    "id": "85ae3a7b-5be5-4cad-a217-444bc92f3e75",
+    "user_type": "ngo",
+    "text": "In a small village on the outskirts of Pune, 9-year-old Meera had dropped out of school to help her mother weave baskets. Her dreams of becoming a teacher faded each day.\r\n\r\nOne morning, volunteers from an NGO called Light for Learning visited her village. They were running a campaign to bring children back to school. Meera watched curiously as they played, read stories, and handed out books.\r\n\r\nA volunteer named Ananya noticed Meera's bright eyes and asked, \u201cDo you like stories?\u201d Meera nodded shyly. The next day, Ananya came back\u2014with a storybook and a promise: \u201cCome to our learning center. Just one hour a day.\u201d\r\n\r\nCuriosity turned into habit. Habit became hope.\r\n\r\nWithin months, Meera was back in school\u2014with new uniforms, books, and her favorite purple backpack, all provided by the NGO. Today, she helps her younger brother read, and tells everyone she\u2019ll grow up to be a teacher.\r\n\r\nAnd she always says, with a smile, \u201cIt all started with one story.\u201d\r\n",
+    "image": null,
+    "audio": "static/uploads\\c4d5f49f-44be-4866-a583-b613c5fdd61e.mp3",
+    "timestamp": "2025-04-24T00:09:20.163417",
+    "status": "approved",
+    "tts_options": {
+      "enabled": true,
+      "language": "hi-IN",
+      "available_languages": [
+        "en-US",
+        "es-ES",
+        "fr-FR",
+        "hi-IN",
+        "de-DE",
+        "ja-JP",
+        "zh-CN"
+      ]
+    },
+    "headline": "One Story Sparks a Young Girl's Return to School",
+    "summary": "Nine year old Meera, forced to drop out of school and help her mother, rediscovers her love for learning thanks to an NGO that visited her village. A volunteer's simple act of sharing stories reignited Meera's dreams, leading her back to school and setting her on a path to becoming a teacher."
+  },
+  {
+    "id": "2612ce93-e2d9-446f-a454-d0fffe975ce0",
+    "user_type": "individual",
+    "text": "A little bird named Coco wanted to fly higher than the clouds. Every day, he flapped his wings a little more. One day, with a big swoosh, he soared above the tallest tree. The sky smiled at him, proud of his courage. From then on, Coco never doubted his dreams.",
+    "image": null,
+    "audio": "static/uploads\\be49996d-05cc-4820-970c-4ef0b16d9f32.mp3",
+    "timestamp": "2025-04-24T00:14:33.533670",
+    "status": "edited",
+    "tts_options": {
+      "enabled": true,
+      "language": "hi-IN",
+      "available_languages": [
+        "en-US",
+        "es-ES",
+        "fr-FR",
+        "hi-IN",
+        "de-DE",
+        "ja-JP",
+        "zh-CN"
+      ]
+    },
+    "translated_audio": {
+      "hi-IN": "static/uploads\\be49996d-05cc-4820-970c-4ef0b16d9f32.mp3"
+    },
+    "headline": "One Story Rekindles a Young Girl's Dream of Education",
+    "summary": "Nine-year-old Meera, forced to drop out of school to help her family, found her dreams reignited by a visit from an NGO. A volunteer, Ananya, sparked Meera's interest in learning with a simple storybook, leading her back to school and on the path to becoming a teacher."
+  },
+  {
+    "id": "f50cab7d-3a3f-4a97-b6aa-e2ec53098be8",
+    "user_type": "ngo",
+    "text": "A little bird named Coco wanted to fly higher than the clouds. Every day, he flapped his wings a little more. One day, with a big swoosh, he soared above the tallest tree. The sky smiled at him, proud of his courage. From then on, Coco never doubted his dreams.",
+    "image": null,
+    "audio": "static/uploads\\3b48da54-56b4-4deb-ab10-ef66300b2352.mp3",
+    "timestamp": "2025-04-24T00:19:25.525921",
+    "status": "pending",
+    "tts_options": {
+      "enabled": true,
+      "language": "hi-IN",
+      "available_languages": [
+        "en-US",
+        "es-ES",
+        "fr-FR",
+        "hi-IN",
+        "de-DE",
+        "ja-JP",
+        "zh-CN"
+      ]
+    },
+    "translated_audio": {
+      "hi-IN": "static/uploads\\3b48da54-56b4-4deb-ab10-ef66300b2352.mp3"
+    },
+    "headline": "Coco the Bird Reaches for the Sky and Achieves His Dream",
+    "summary": "A determined little bird named Coco dreams of flying higher than the clouds. Through perseverance and unwavering belief in himself, he finally overcomes his limits and soars above the tallest tree, proving that any dream is achievable with enough courage."
+  },
+  {
+    "id": "a68eed71-f786-4a02-9584-4ee94ba07858",
+    "user_type": "volunteer",
+    "text": "A little bird named Coco wanted to fly higher than the clouds. Every day, he flapped his wings a little more. One day, with a big swoosh, he soared above the tallest tree. The sky smiled at him, proud of his courage. From then on, Coco never doubted his dreams.",
+    "image": null,
+    "audio": "static/uploads\\87e85c6b-1bda-471a-8490-7c033a6d8fed.mp3",
+    "timestamp": "2025-04-24T00:21:35.988148",
+    "status": "approved",
+    "tts_options": {
+      "enabled": true,
+      "language": "fr-FR",
+      "available_languages": [
+        "en-US",
+        "es-ES",
+        "fr-FR",
+        "hi-IN",
+        "de-DE",
+        "ja-JP",
+        "zh-CN"
+      ]
+    },
+    "translated_audio": {
+      "fr-FR": "static/uploads\\87e85c6b-1bda-471a-8490-7c033a6d8fed.mp3"
+    },
+    "headline": "Coco the Bird Achieves Dream of Flying Above the Clouds",
+    "summary": "Coco, a determined little bird, dreams of flying higher than the clouds. Through perseverance and unwavering belief in himself, he finally soars above the tallest tree, realizing his dream and inspiring himself to never doubt his goals again."
+  }
+]
