@@ -16,54 +16,60 @@ SocioDev is a mobile application built with React Native and Expo that allows de
 
 ### 👤 User Profiles
 
-- Custom user profiles with profile pictures
-- Add social media links (GitHub, LinkedIn, Portfolio website)
-- Follow other developers
+- Custom user profiles with profile pictures  
+- Add social media links (GitHub, LinkedIn, Portfolio website)  
+- Follow other developers  
 - View follower/following counts
 
 ### 📝 Article Management
 
-- Create, edit, and delete articles
-- Add cover images to articles
-- Tag articles for better categorization
+- Create, edit, and delete articles  
+- Add cover images to articles  
+- Tag articles for better categorization  
 - View trending and recent articles
 
 ### 🔖 Bookmarks
 
-- Save interesting articles for later
-- Dedicated bookmarks tab for easy access
+- Save interesting articles for later  
+- Dedicated bookmarks tab for easy access  
 - Track articles you've saved
 
 ### 🤖 AI-Powered Content Generation
 
-- Generate article drafts using AI
-- Get AI-suggested titles, content, and tags
+- Generate article drafts using AI  
+- Get AI-suggested titles, content, and tags  
 - Quickly jumpstart your writing process
 
 ### 🔍 Search & Discovery
 
-- Search articles by title, content, or tags
-- Discover trending articles
+- Search articles by title, content, or tags  
+- Discover trending articles  
 - Explore articles from followed users
 
 ## 🛠️ Technology Stack
 
-- **Frontend**: React Native, Expo Router
-- **UI Components**: Custom themed components, Tailwind CSS (NativeWind)
-- **State Management**: React Context API
-- **Authentication**: Firebase Authentication
-- **Database**: Firebase Firestore
-- **Storage**: Firebase Storage
-- **AI Integration**: Google Gemini AI API
+- **Frontend**: React Native, Expo Router  
+- **UI Components**: Custom themed components, Tailwind CSS (NativeWind)  
+- **State Management**: React Context API  
+- **Authentication**: Firebase Authentication  
+- **Database**: Firebase Firestore  
+- **Storage**: Firebase Storage  
+- **AI Integration**: Google Gemini AI API  
+
+## 📷 App Preview (Figma Design)
+
+View app UI mockups and design prototypes on Figma:
+
+👉 [Figma Preview – SocioDev](https://www.figma.com/design/J3JsAb2aR3rnuG1y1mEi8i/SocioDev?t=Uddb0pYBc21zj58S-0)
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v16 or newer)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- [Expo CLI](https://docs.expo.dev/get-started/installation/)
-- [Firebase account](https://firebase.google.com/)
+- [Node.js](https://nodejs.org/) (v16 or newer)  
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)  
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)  
+- [Firebase account](https://firebase.google.com/)  
 - [Google Gemini API key](https://ai.google.dev/) (optional, for AI features)
 
 ### Installation
@@ -71,9 +77,9 @@ SocioDev is a mobile application built with React Native and Expo that allows de
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/samyakraka/SocioDev.git
+   git clone https://github.com/samyakraka/SocioDev-Main.git
    cd SocioDev
-   ```
+
 
 2. Install dependencies:
 
